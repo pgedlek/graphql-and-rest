@@ -30,4 +30,13 @@ class ProfileControllerTest {
                 .entityList(Profile.class)
                 .hasSize(2);
     }
+
+    @Test
+    void shouldRetrieveFirstProfileSuccessfully() {
+        graphQlTester.documentName("profiles")
+                .execute()
+                .path("profileById")
+                .entity(Profile.class)
+                .isEqualTo(new Profile(1, "John", "Doe", "jdoe@email.com", 18, null));
+    }
 }

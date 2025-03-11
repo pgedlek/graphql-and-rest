@@ -13,4 +13,11 @@ query profiles {
     age
     id
   }
+  profileById(id: 1) {
+    age
+    email
+    firstName
+    id
+    lastName
+  }
 }
