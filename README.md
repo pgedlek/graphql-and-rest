@@ -1,1 +1,1 @@
-# Spring Grahpql
+# Spring Boot with GrahQL vs REST
